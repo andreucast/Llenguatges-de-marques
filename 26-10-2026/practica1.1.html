@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Receta Andreu Castaño</title>
+
+    <style>
+        /* 1. ESTILO GENERAL DE LA PÁGINA */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f1e8;
+            color: #333333;
+        }
+
+        /* 2. HEADER: CABECERA */
+        header {
+            background-color: #254d3a;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header a {
+            color: #f5d58a;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* 3. NAVEGADOR: BARRA DE ENLACES */
+        nav {
+            background-color: #183528;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        /* Color al pasar el cursor */
+        nav a:hover {
+            background-color: #d6e8c5;
+            color: #183528;
+        }
+
+        /* Color de los enlaces visitados */
+        nav a:visited {
+            color: #e8c6ff;
+        }
+
+        /* El color del cursor tiene prioridad visual */
+        nav a:hover {
+            color: #183528;
+        }
+
+        /* 4. MENSAJE PEQUEÑO AL PASAR EL CURSOR */
+        nav a::after {
+            content: attr(data-mensaje);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #222222;
+            color: white;
+            padding: 8px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        nav a:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 5. FONDO CON IMAGEN */
+        #backgroundimage {
+            background-image: url("backgroundimage.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 30px 20px;
+        }
+
+        /* 6. CENTRAR EL CONTENIDO, SIN HEADER NI FOOTER */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 7. RECUADROS PARA LAS SECCIONES */
+        section {
+            background-color: #fffdf7;
+            border: 2px solid #8caf83;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #254d3a;
+        }
+
+        /* 8. TEXTO E IMAGEN DE LA PREPARACIÓN */
+        #preparacion .contenido-preparacion {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        #preparacion .texto-preparacion {
+            flex: 1;
+            min-width: 0;
+        }
+
+        #preparacion img {
+            width: 40%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        /* 9. FOOTER: PIE DE PÁGINA */
+        footer {
+            background-color: #254d3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer hr {
+            border: 1px solid #8caf83;
+        }
+
+        /* 10. ADAPTACIÓN A MÓVILES */
+        @media (max-width: 650px) {
+            #backgroundimage {
+                padding: 20px 12px;
+            }
+
+            section {
+                padding: 18px;
+            }
+
+            #preparacion .contenido-preparacion {
+                flex-direction: column;
+            }
+
+            #preparacion img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            nav {
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <p>
+        Autor:
+        <a href="mailto:andcasrin@gmail.com">
+            Andreu Castaño Rincón
+        </a>
+    </p>
+
+    <h1>Receta para hacer pechuga de pollo a la plancha</h1>
+
+    <nav>
+        <a href="#ingredientes"
+           data-mensaje="Descubre qué necesitas">
+            Ingredientes
+        </a>
+
+        <a href="#preparacion"
+           data-mensaje="Aprende a cocinar el pollo">
+            Preparación
+        </a>
+
+        <a href="#informacion"
+           data-mensaje="Consulta los tiempos de la receta">
+            Información
+        </a>
+
+        <a href="#video"
+           data-mensaje="Mira el video de la receta">
+            Video
+        </a>
+    </nav>
+
+    <hr>
+</header>
+
+<div id="backgroundimage">
+
+    <main>
+
+        <section id="preparacion">
+            <h2>Cómo preparar la receta</h2>
+
+            <div class="contenido-preparacion">
+
+                <div class="texto-preparacion">
+                    <p>
+                        Para preparar esta receta, primero debemos
+                        <strong>limpiar los filetes de pollo</strong>
+                        y comprobar que tienen un grosor similar.
+                    </p>
+
+                    <p>
+                        Después, añadimos
+                        <mark>sal y pimienta</mark>
+                        al gusto y calentamos una sartén.
+                    </p>
+
+                    <p>
+                        Añadimos un poco de aceite de oliva
+                        y cocinamos los filetes hasta que estén
+                        completamente hechos por dentro.
+                    </p>
+                </div>
+
+                <img src="pechugapollo.jpg"
+                     alt="Filetes de pechuga de pollo a la plancha">
+            </div>
+        </section>
+
+        <section id="ingredientes">
+            <h2>Ingredientes</h2>
+
+            <ul>
+                <li>Filetes de pechuga de pollo</li>
+                <li>Sal al gusto</li>
+                <li>Pimienta al gusto</li>
+                <li>1 cucharada de aceite de oliva</li>
+            </ul>
+        </section>
+
+        <section id="informacion">
+            <h2>Información de la receta</h2>
+
+            <p><strong>Dificultad:</strong> Fácil</p>
+            <p><strong>Tiempo de preparación:</strong> 5 minutos</p>
+            <p><strong>Tiempo de cocción:</strong> 10 minutos</p>
+            <p><strong>Tiempo total aproximado:</strong> 15 minutos</p>
+        </section>
+
+        <section id="dieta">
+            <h2>Intolerancias y alérgenos</h2>
+
+            <p>
+                Esta receta no contiene gluten, lactosa,
+                marisco, huevos, frutos secos, soja ni cacahuetes.
+            </p>
+
+            <p>
+                La receta contiene pimienta, que es opcional
+                por si se desea evitar el picante.
+            </p>
+
+            <p>
+                <strong>Importante:</strong> comprueba siempre las
+                etiquetas de los productos y evita la contaminación
+                cruzada.
+            </p>
+
+            <h2>Tipo de dieta</h2>
+
+            <p>Dieta: <strong>omnívora</strong>.</p>
+        </section>
+
+        <section id="video">
+            <h2>Video de la receta</h2>
+
+            <video width="800" height="300" controls>
+                <source src="video-receta.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </section>
+
+    </main>
+
+</div>
+
+<footer>
+    <hr>
+
+    <p>
+        &copy; 2026 Andreu Castaño Rincón.
+        Todos los derechos reservados.
+    </p>
+
+    <p>Programador: Andreu Castaño Rincón</p>
+</footer>
+
+</body>
+</html>
