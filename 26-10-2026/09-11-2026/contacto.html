@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contacto Andreu</title>
+</head>
+
+<body>
+
+<header>
+    <nav>
+    <a href="receta1.html" data-mensaje="Receta de Pollo">Pollo a la plancha</a>
+    <a href="receta2.html" data-mensaje="Receta de Pasta">Macarrones</a>
+    <a href="contacto.html" data-mensaje="Ponte en contacto">Contacto</a>
+    </nav>
+
+    <nav>
+        <a href="#formulario-contacto"
+           data-mensaje="Formulario de contacto">
+            Contacto
+        </a>
+
+        <a href="#horarios"
+            data-mensaje="Consulta los horarios de atención">
+            Horarios
+        </a>
+
+        <a href="#mapa-imagen"
+            data-mensaje="Consulta el mapa de ubicación">
+            Mapa
+        </a>
+    </nav>
+
+    <hr>
+</header>
+
+<div id="backgroundimage">
+
+    <main>
+
+        <section id="formulario-contacto">
+            <h2>Formulario de Contacto</h2>
+            <form action="#" method="post">
+                <!-- 1 y 2: Label e Input de texto -->
+                <p>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+                </p>
+
+                <!-- 3: Input de tipo email -->
+                <p>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required placeholder="tu@correo.com">
+                </p>
+
+                <!-- 4: Elemento Select (Desplegable) -->
+                <p>
+                    <label for="motivo">Motivo de consulta:</label><br>
+                    <select id="motivo" name="motivo">
+                        <option value="receta">Duda sobre una receta</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </p>
+
+                <!-- 5: Elemento Textarea -->
+                <p>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </p>
+
+                <!-- 6: Input de tipo Checkbox -->
+                <p>
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto la política de privacidad</label>
+                </p>
+
+                <!-- 7: Input de tipo Submit (Botón) -->
+                <p>
+                    <input type="submit" value="Enviar mensaje">
+                </p>
+            </form>
+        </section>
+
+        <section id="horarios">
+            <h2>Horarios de Atención</h2>
+            <table border="1" style="width:100%; border-collapse: collapse; text-align: center;">
+                <tr>
+                    <th>Día de la semana</th>
+                    <th>Horario de contacto</th>
+                </tr>
+                <tr>
+                    <td>Lunes a Jueves</td>
+                    <td>09:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>09:00 - 14:00</td>
+                </tr>
+                <tr>
+                    <td>Fines de semana</td>
+                    <td>Cerrado</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="mapa-imagen">
+            <h2>Ubicación interactiva</h2>
+            <p>Haz clic en las diferentes zonas de la imagen para navegar:</p>
+            
+            <!-- Imagen de referencia -->
+            <img src="imagen-mapa.jpg" alt="Mapa de contacto" usemap="#workmap" width="400" height="300">
+
+            <!-- Definición de las áreas interactivas -->
+            <map name="workmap">
+                <!-- Área rectangular (coordenadas: x1, y1, x2, y2) -->
+                <area shape="rect" coords="34,44,270,350" href="index.html" alt="Ir a Receta 1">
+                
+                <!-- Área circular (coordenadas: x, y, radio) -->
+                <area shape="circle" coords="337,300,44" href="recepta2.html" alt="Ir a Receta 2">
+            </map>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+
+</html>
