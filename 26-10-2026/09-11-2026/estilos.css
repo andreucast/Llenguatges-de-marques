@@ -1,0 +1,174 @@
+      /* 1. ESTILO GENERAL DE LA PÁGINA */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f1e8;
+            color: #333333;
+        }
+
+        /* 2. HEADER: CABECERA */
+        header {
+            background-color: #254d3a;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        header a {
+            color: #f5d58a;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        /* 3. NAVEGADOR: BARRA DE ENLACES */
+        nav {
+            background-color: #183528;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            position: relative;
+        }
+
+        /* Color al pasar el cursor */
+        nav a:hover {
+            background-color: #d6e8c5;
+            color: #183528;
+        }
+
+        /* Color de los enlaces visitados */
+        nav a:visited {
+            color: #e8c6ff;
+        }
+
+        /* El color del cursor tiene prioridad visual */
+        nav a:hover {
+            color: #183528;
+        }
+
+        /* 4. MENSAJE PEQUEÑO AL PASAR EL CURSOR */
+        nav a::after {
+            content: attr(data-mensaje);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #222222;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 6px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s;
+            
+        }
+
+        nav a:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 5. FONDO CON IMAGEN */
+        #backgroundimage {
+            background-image: url("backgroundimage.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 30px 20px;
+        }
+
+        /* 6. CENTRAR EL CONTENIDO, SIN HEADER NI FOOTER */
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 7. RECUADROS PARA LAS SECCIONES */
+        section {
+            background-color: #fffdf7;
+            border: 2px solid #8caf83;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: #254d3a;
+        }
+
+        /* 8. TEXTO E IMAGEN DE LA PREPARACIÓN */
+        #preparacion .contenido-preparacion {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        #preparacion .texto-preparacion {
+            flex: 1;
+            min-width: 0;
+        }
+
+        #preparacion img {
+            width: 40%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 16px;
+            object-fit: cover;
+        }
+
+        /* 9. FOOTER: PIE DE PÁGINA */
+        footer {
+            background-color: #254d3a;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer hr {
+            border: 1px solid #8caf83;
+        }
+        
+        /* Estilos extra opcionales para la tabla y el formulario en contacto.html */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #8caf83;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #254d3a;
+            color: white;
+        }
+
+        form input[type="text"], 
+        form input[type="email"], 
+        form select, 
+        form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #8caf83;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
